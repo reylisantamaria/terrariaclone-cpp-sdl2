@@ -886,5 +886,4 @@ CMakeFiles/TerrariaClone.dir/src/Game.cpp.o: \
   /Library/Frameworks/SDL2.framework/Headers/SDL_version.h \
   /Library/Frameworks/SDL2.framework/Headers/SDL_locale.h \
   /Library/Frameworks/SDL2.framework/Headers/SDL_misc.h \
-  /Library/Frameworks/SDL2_image.framework/Headers/SDL_image.h \
-  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/RenderWindow.hpp
+  /Library/Frameworks/SDL2_image.framework/Headers/SDL_image.h

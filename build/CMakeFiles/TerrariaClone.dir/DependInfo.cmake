@@ -10,7 +10,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Game.cpp" "CMakeFiles/TerrariaClone.dir/src/Game.cpp.o" "gcc" "CMakeFiles/TerrariaClone.dir/src/Game.cpp.o.d"
   "/Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/main.cpp" "CMakeFiles/TerrariaClone.dir/src/main.cpp.o" "gcc" "CMakeFiles/TerrariaClone.dir/src/main.cpp.o.d"
-  "/Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/renderwindow.cpp" "CMakeFiles/TerrariaClone.dir/src/renderwindow.cpp.o" "gcc" "CMakeFiles/TerrariaClone.dir/src/renderwindow.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

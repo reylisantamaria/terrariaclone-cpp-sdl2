@@ -3,8 +3,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/TerrariaClone.dir/src/Game.cpp.o.d"
   "CMakeFiles/TerrariaClone.dir/src/main.cpp.o"
   "CMakeFiles/TerrariaClone.dir/src/main.cpp.o.d"
-  "CMakeFiles/TerrariaClone.dir/src/renderwindow.cpp.o"
-  "CMakeFiles/TerrariaClone.dir/src/renderwindow.cpp.o.d"
   "TerrariaClone"
   "TerrariaClone.pdb"
 )

@@ -177,30 +177,6 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TerrariaClone.dir/build.make CMakeFiles/TerrariaClone.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/renderwindow.o: src/renderwindow.cpp.o
-.PHONY : src/renderwindow.o
-
-# target to build an object file
-src/renderwindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TerrariaClone.dir/build.make CMakeFiles/TerrariaClone.dir/src/renderwindow.cpp.o
-.PHONY : src/renderwindow.cpp.o
-
-src/renderwindow.i: src/renderwindow.cpp.i
-.PHONY : src/renderwindow.i
-
-# target to preprocess a source file
-src/renderwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TerrariaClone.dir/build.make CMakeFiles/TerrariaClone.dir/src/renderwindow.cpp.i
-.PHONY : src/renderwindow.cpp.i
-
-src/renderwindow.s: src/renderwindow.cpp.s
-.PHONY : src/renderwindow.s
-
-# target to generate assembly for a file
-src/renderwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TerrariaClone.dir/build.make CMakeFiles/TerrariaClone.dir/src/renderwindow.cpp.s
-.PHONY : src/renderwindow.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -216,9 +192,6 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/renderwindow.o"
-	@echo "... src/renderwindow.i"
-	@echo "... src/renderwindow.s"
 .PHONY : help
 
 
