@@ -1,13 +1,13 @@
 #pragma once
 
-#include "Game.h"
+#include <SDL.h>
 
 class GameObject {
   public:
     GameObject(int x, int y, int width, int height, const char* texturesheet, SDL_Renderer* ren);
     virtual ~GameObject();
 
-    virtual void Update();
+    virtual void Update(float delta_time);
     virtual void Render();
 
     int GetX() const { return x_; }

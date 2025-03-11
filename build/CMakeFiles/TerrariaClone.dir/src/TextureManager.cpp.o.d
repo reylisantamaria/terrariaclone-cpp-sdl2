@@ -910,8 +910,9 @@ CMakeFiles/TerrariaClone.dir/src/TextureManager.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/cstdarg \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__memory/temp_value.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__split_buffer \
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/GameObject.h \
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Player.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/istream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/ostream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/bitset \
-  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Timer.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/bitset

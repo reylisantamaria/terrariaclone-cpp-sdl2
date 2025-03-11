@@ -7,10 +7,12 @@ GameObject::GameObject(int x, int y, int width, int height, const char* textures
   objTexture_ = TextureManager::LoadTexture(texturesheet, ren);
 }
 
-void GameObject::Update() {
-  if (GetX() < 0) {
-    SetX(0);
-  }
+GameObject::~GameObject() {
+  
+}
+// how we update our objects
+void GameObject::Update(float delta_time) {
+  
 }
 
 void GameObject::Render() {

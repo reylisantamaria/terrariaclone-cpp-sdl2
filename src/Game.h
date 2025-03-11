@@ -1,8 +1,8 @@
 #pragma once
 #include <SDL.h>
 #include <vector>
-#include <iostream>
-#include "Timer.h"
+#include "GameObject.h"
+#include "Player.h"
 
 class Game {
   public:
@@ -14,11 +14,12 @@ class Game {
 
   private:
     void HandleEvents();
-    void Update();
+    void Update(float delta_time);
     void Render();
     
     bool running_;
+    std::vector<GameObject*> game_objects_;
+    Player *player_;
     SDL_Window *window;
     SDL_Renderer *renderer;
-    int count = 0;
 };
