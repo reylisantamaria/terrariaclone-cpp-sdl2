@@ -7,7 +7,8 @@
                 "/Library/Frameworks",
                 "/Library/Frameworks/SDL2.framework/Headers",
                 "/Library/Frameworks/SDL2_image.framework/Headers",
-                "/Library/Frameworks/SDL2_ttf.framework/Headers"
+                "/Library/Frameworks/SDL2_ttf.framework/Headers",
+                "${workspaceFolder}/src"
             ],
             "defines": [],
             "macFrameworkPath": [

@@ -1,11 +1,11 @@
 #include <iostream>
-#include "Game.hpp"
+#include <vector>
+#include "Game.h"
+#include "TextureManager.h"
+#include "Timer.h"
 
-Game::Game() : isRunning(false), window(nullptr), renderer(nullptr),
-               count(0), playerX(100), playerY(100), playerSpeed(5) {}
-Game::~Game(){}
-
-void Game::init(const char* p_title, int p_w, int p_h, bool fullscreen) {
+Game::Game(const char* p_title, int p_w, int p_h, bool fullscreen)
+  : running_(false), window(nullptr), renderer(nullptr) {
   int flags = 0;
   if (fullscreen) {
     flags = SDL_WINDOW_FULLSCREEN;
@@ -19,30 +19,39 @@ void Game::init(const char* p_title, int p_w, int p_h, bool fullscreen) {
       SDL_SetRenderDrawColor(renderer, 96, 128, 255, 255);
       std::cout << "Renderer created!" << std::endl;
     }
-    isRunning = true; // Mark the game as running
-
-    // Load the player image 
-    SDL_Surface *tmpSurface = IMG_Load("../resources/images/entities/player.png");
-    if (!tmpSurface) {
-      std::cerr << "Failed to load player image! Error: " << IMG_GetError() << std::endl;
-      isRunning = false;
-    }
-    playerTex = SDL_CreateTextureFromSurface(renderer, tmpSurface);
-    SDL_FreeSurface(tmpSurface);
-
-    keystates = SDL_GetKeyboardState(nullptr);
+    running_ = true; // Mark the game as running
   } else {
-    isRunning = false; // Mark the game as not running
     std::cerr << "Error: " << SDL_GetError() << std::endl;
   }
-
 }
 
-void Game::handleEvents() {
+Game::~Game() {
+  // Clean up resources
+  SDL_DestroyRenderer(renderer);
+  SDL_DestroyWindow(window);
+  SDL_Quit();
+  running_ = false;
+  std::cout << "Game Cleaned" << std::endl;
+}
+
+void Game::Run() {
+  Timer timer;
+  while (running_) {
+    timer.Tick();
+    float deltaTime = timer.GetDeltaTime();
+
+    HandleEvents();
+    Update();
+    Render();
+  }
+}
+
+void Game::HandleEvents() {
+  SDL_Event event;
   while (SDL_PollEvent(&event)) {
     switch (event.type) {
         case SDL_QUIT:
-          isRunning = false;
+          running_ = false;
           break;
         // Add more event handling here
         default:
@@ -51,35 +60,17 @@ void Game::handleEvents() {
   }
 }
 
-void Game::update() {
-  // update game logic here
-  if (keystates[SDL_SCANCODE_A]) {
-    playerX -= playerSpeed;
-  }
-  if (keystates[SDL_SCANCODE_D]) {
-    playerX += playerSpeed;
-  }
-  count++;
+void Game::Update() {
   std::cout << count << std::endl;
+  count++;
 }
-void Game::render() {
+
+
+void Game::Render() {
   // clears screen
   SDL_RenderClear(renderer);
-
-  // this is where we would add stuff to render
-  SDL_Rect playerRect = {playerX, playerY, 64, 64};
-  SDL_RenderCopy(renderer, playerTex, nullptr, &playerRect);
   // Update the screen
   SDL_RenderPresent(renderer);
-}
-void Game::clean() {
-  // Clean up resources
-  SDL_DestroyTexture(playerTex);
-  SDL_DestroyRenderer(renderer);
-  SDL_DestroyWindow(window);
-  SDL_Quit();
-  isRunning = false;
-  std::cout << "Game Cleaned" << std::endl;
 }
 
 
