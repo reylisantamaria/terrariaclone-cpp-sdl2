@@ -5,7 +5,7 @@
 
 class Player : public GameObject {
   public:
-    Player(int x, int y, int width, int height, const char* texturesheet, SDL_Renderer* renderer);
+    Player(float x, float y, int width, int height, const char* texturesheet, SDL_Renderer* renderer);
     ~Player();
 
     void Update(float delta_time);

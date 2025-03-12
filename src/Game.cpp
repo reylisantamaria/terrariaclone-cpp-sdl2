@@ -6,6 +6,8 @@
 
 // Main functions for the game
 
+
+
 Game::Game(const char* p_title, int p_w, int p_h, bool fullscreen)
   : running_(false), window(nullptr), renderer(nullptr) {
   int flags = 0;
@@ -23,7 +25,7 @@ Game::Game(const char* p_title, int p_w, int p_h, bool fullscreen)
     }
     running_ = true; // Mark the game as running
 
-    player_ = new Player(100, 100, 50, 50, "../resources/images/entities/player.png", renderer);
+    player_ = new Player(100, 500, 50, 50, "../resources/images/entities/player.png", renderer);
 
     game_objects_.push_back(player_);
   } else {
@@ -76,6 +78,7 @@ void Game::Update(float delta_time) {
     obj->Update(delta_time);
   }
   player_->HandleInput();
+  player_->Update(delta_time);
 }
 
 
