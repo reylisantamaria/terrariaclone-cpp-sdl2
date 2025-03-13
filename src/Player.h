@@ -10,8 +10,10 @@ class Player : public GameObject {
 
     void Update(float delta_time);
     void HandleInput();
+    void Jump();
     void Render();
 
   private:
+    bool jumping_;
     float velocityX_, velocityY_;
 };
