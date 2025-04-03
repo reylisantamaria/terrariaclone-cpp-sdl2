@@ -1,6 +1,6 @@
-CMakeFiles/TerrariaClone.dir/src/GameObject.cpp.o: \
-  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/GameObject.cpp \
-  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/GameObject.h \
+CMakeFiles/TerrariaClone.dir/src/Entity.cpp.o: \
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Entity.cpp \
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Entity.h \
   /Library/Frameworks/SDL2.framework/Headers/SDL.h \
   /Library/Frameworks/SDL2.framework/Headers/SDL_main.h \
   /Library/Frameworks/SDL2.framework/Headers/SDL_stdinc.h \

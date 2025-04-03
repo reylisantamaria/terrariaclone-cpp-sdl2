@@ -1,7 +1,7 @@
 #pragma once
 #include <SDL.h>
 #include <vector>
-#include "GameObject.h"
+#include "Entity.h"
 #include "Player.h"
 
 class Game {
@@ -18,7 +18,7 @@ class Game {
     void Render();
     
     bool running_;
-    std::vector<GameObject*> game_objects_;
+    std::vector<Entity*> game_objects_;
     Player *player_;
     SDL_Window *window;
     SDL_Renderer *renderer;

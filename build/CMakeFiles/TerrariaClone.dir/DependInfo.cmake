@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Entity.cpp" "CMakeFiles/TerrariaClone.dir/src/Entity.cpp.o" "gcc" "CMakeFiles/TerrariaClone.dir/src/Entity.cpp.o.d"
   "/Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Game.cpp" "CMakeFiles/TerrariaClone.dir/src/Game.cpp.o" "gcc" "CMakeFiles/TerrariaClone.dir/src/Game.cpp.o.d"
-  "/Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/GameObject.cpp" "CMakeFiles/TerrariaClone.dir/src/GameObject.cpp.o" "gcc" "CMakeFiles/TerrariaClone.dir/src/GameObject.cpp.o.d"
   "/Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Player.cpp" "CMakeFiles/TerrariaClone.dir/src/Player.cpp.o" "gcc" "CMakeFiles/TerrariaClone.dir/src/Player.cpp.o.d"
   "/Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/TextureManager.cpp" "CMakeFiles/TerrariaClone.dir/src/TextureManager.cpp.o" "gcc" "CMakeFiles/TerrariaClone.dir/src/TextureManager.cpp.o.d"
   "/Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Timer.cpp" "CMakeFiles/TerrariaClone.dir/src/Timer.cpp.o" "gcc" "CMakeFiles/TerrariaClone.dir/src/Timer.cpp.o.d"

@@ -4,69 +4,57 @@
 
 using namespace std;
 
-const float TILE_SIZE = 24.0f;
-const float MOVE_SPEED = 6.0f * TILE_SIZE;
-const float GRAVITY = 50.0f;
+// CONSTRUCTOR
 
 Player::Player(float x, float y, int width, int height,
                const char* texturePath, SDL_Renderer* renderer)
-  : GameObject(x, y, width, height, texturePath, renderer),
-    velocityX_(0), velocityY_(0), jumping_(false) { }
+  : Entity(x, y, width, height, texturePath, renderer),
+    velocityX_(0),
+    velocityY_(0),
+    is_grounded_(false),
+    jumping_(false) {}
 
+// DECONSTRUCTOR 
 Player::~Player(){
+
+}
+
+
+// ------------------------------ MEMBER FUCNTIONS -------------------------------------
+void Player::Update(float delta_time) {
+  HandleInput();
+
+  velocityY_ +=  kGravity * delta_time;
+  SetX(GetX() + velocityX_ * delta_time); // Move horizonatally
+  SetY(GetY() + velocityY_ * delta_time); // move vertically
+
+  //------ Temp -------
+
+  is_grounded_ = (GetY() + GetHeight() >= 500.0f);
+
+  if (is_grounded_) {
+    velocityY_ = 0;
+    SetY(500.0f - GetHeight());
+  }
+
+  cout << "Y: " << GetY() << " | VelY: " << velocityY_ << " | Grounded: " << is_grounded_ << endl;
 }
 
 void Player::Render() {
-  GameObject::Render();
-}
-
-void Player::Update(float delta_time) {
-  // base class update
-  GameObject::Update(delta_time);
-
-  // movement
-  HandleInput();
-
-  velocityY_ += GRAVITY * delta_time; // applying gravity
-
-  // udpates the player's position based on velocity
-  // multiplying by delta ensures the speed stays consitent
-  // regardless of the frame rate
-  SetX(GetX() + velocityX_ * delta_time);
-  SetY(GetY() + velocityY_ * delta_time);
-
-  // will make sure the player lands at y-500 (test)
-  if (GetY() >= 500) {
-    SetY(500);
-    velocityY_ = 0;
-    jumping_ = false;
-  }
-
-  // Debugging 
-  cout << "Jumping: " << jumping_ 
-  << ", Y: " << GetY() 
-  << ", VelY: " << velocityY_ 
-  << endl;
-}
-
-void Player::Jump() {
-  if (!jumping_) {
-  jumping_ = true;
-  velocityY_ = -MOVE_SPEED * 0.5f; // upward velocity
-  }
+  Entity::Render();
 }
 
 void Player::HandleInput() {
-  const Uint8* current_key_states = SDL_GetKeyboardState(nullptr);
+  const Uint8* keys = SDL_GetKeyboardState(nullptr);
 
-  if (current_key_states[SDL_SCANCODE_A]) {
-    velocityX_ = -MOVE_SPEED;
-  } else if (current_key_states[SDL_SCANCODE_D]) {
-    velocityX_ = MOVE_SPEED;
+  if (keys[SDL_SCANCODE_A]) {
+    velocityX_ = -kMaxSpeed;
+  } else if (keys[SDL_SCANCODE_D]) {
+    velocityX_ = kMaxSpeed;
   } else {
     velocityX_ = 0;
   }
-  if (current_key_states[SDL_SCANCODE_SPACE]) {
-    Jump();
+  if (keys[SDL_SCANCODE_SPACE] && is_grounded_) {
+    velocityY_ = -kMaxSpeed * 0.8f;
   }
 }

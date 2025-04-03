@@ -72,10 +72,24 @@ include CMakeFiles/TerrariaClone.dir/flags.make
 CMakeFiles/TerrariaClone.dir/codegen:
 .PHONY : CMakeFiles/TerrariaClone.dir/codegen
 
+CMakeFiles/TerrariaClone.dir/src/Entity.cpp.o: CMakeFiles/TerrariaClone.dir/flags.make
+CMakeFiles/TerrariaClone.dir/src/Entity.cpp.o: /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Entity.cpp
+CMakeFiles/TerrariaClone.dir/src/Entity.cpp.o: CMakeFiles/TerrariaClone.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/reylisantamaria/Documents/GitHub/TerrariaClone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TerrariaClone.dir/src/Entity.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TerrariaClone.dir/src/Entity.cpp.o -MF CMakeFiles/TerrariaClone.dir/src/Entity.cpp.o.d -o CMakeFiles/TerrariaClone.dir/src/Entity.cpp.o -c /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Entity.cpp
+
+CMakeFiles/TerrariaClone.dir/src/Entity.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TerrariaClone.dir/src/Entity.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Entity.cpp > CMakeFiles/TerrariaClone.dir/src/Entity.cpp.i
+
+CMakeFiles/TerrariaClone.dir/src/Entity.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TerrariaClone.dir/src/Entity.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Entity.cpp -o CMakeFiles/TerrariaClone.dir/src/Entity.cpp.s
+
 CMakeFiles/TerrariaClone.dir/src/Game.cpp.o: CMakeFiles/TerrariaClone.dir/flags.make
 CMakeFiles/TerrariaClone.dir/src/Game.cpp.o: /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Game.cpp
 CMakeFiles/TerrariaClone.dir/src/Game.cpp.o: CMakeFiles/TerrariaClone.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/reylisantamaria/Documents/GitHub/TerrariaClone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TerrariaClone.dir/src/Game.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/reylisantamaria/Documents/GitHub/TerrariaClone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TerrariaClone.dir/src/Game.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TerrariaClone.dir/src/Game.cpp.o -MF CMakeFiles/TerrariaClone.dir/src/Game.cpp.o.d -o CMakeFiles/TerrariaClone.dir/src/Game.cpp.o -c /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Game.cpp
 
 CMakeFiles/TerrariaClone.dir/src/Game.cpp.i: cmake_force
@@ -85,20 +99,6 @@ CMakeFiles/TerrariaClone.dir/src/Game.cpp.i: cmake_force
 CMakeFiles/TerrariaClone.dir/src/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TerrariaClone.dir/src/Game.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Game.cpp -o CMakeFiles/TerrariaClone.dir/src/Game.cpp.s
-
-CMakeFiles/TerrariaClone.dir/src/GameObject.cpp.o: CMakeFiles/TerrariaClone.dir/flags.make
-CMakeFiles/TerrariaClone.dir/src/GameObject.cpp.o: /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/GameObject.cpp
-CMakeFiles/TerrariaClone.dir/src/GameObject.cpp.o: CMakeFiles/TerrariaClone.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/reylisantamaria/Documents/GitHub/TerrariaClone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TerrariaClone.dir/src/GameObject.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TerrariaClone.dir/src/GameObject.cpp.o -MF CMakeFiles/TerrariaClone.dir/src/GameObject.cpp.o.d -o CMakeFiles/TerrariaClone.dir/src/GameObject.cpp.o -c /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/GameObject.cpp
-
-CMakeFiles/TerrariaClone.dir/src/GameObject.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TerrariaClone.dir/src/GameObject.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/GameObject.cpp > CMakeFiles/TerrariaClone.dir/src/GameObject.cpp.i
-
-CMakeFiles/TerrariaClone.dir/src/GameObject.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TerrariaClone.dir/src/GameObject.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/GameObject.cpp -o CMakeFiles/TerrariaClone.dir/src/GameObject.cpp.s
 
 CMakeFiles/TerrariaClone.dir/src/Player.cpp.o: CMakeFiles/TerrariaClone.dir/flags.make
 CMakeFiles/TerrariaClone.dir/src/Player.cpp.o: /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Player.cpp
@@ -158,8 +158,8 @@ CMakeFiles/TerrariaClone.dir/src/main.cpp.s: cmake_force
 
 # Object files for target TerrariaClone
 TerrariaClone_OBJECTS = \
+"CMakeFiles/TerrariaClone.dir/src/Entity.cpp.o" \
 "CMakeFiles/TerrariaClone.dir/src/Game.cpp.o" \
-"CMakeFiles/TerrariaClone.dir/src/GameObject.cpp.o" \
 "CMakeFiles/TerrariaClone.dir/src/Player.cpp.o" \
 "CMakeFiles/TerrariaClone.dir/src/TextureManager.cpp.o" \
 "CMakeFiles/TerrariaClone.dir/src/Timer.cpp.o" \
@@ -168,8 +168,8 @@ TerrariaClone_OBJECTS = \
 # External object files for target TerrariaClone
 TerrariaClone_EXTERNAL_OBJECTS =
 
+TerrariaClone: CMakeFiles/TerrariaClone.dir/src/Entity.cpp.o
 TerrariaClone: CMakeFiles/TerrariaClone.dir/src/Game.cpp.o
-TerrariaClone: CMakeFiles/TerrariaClone.dir/src/GameObject.cpp.o
 TerrariaClone: CMakeFiles/TerrariaClone.dir/src/Player.cpp.o
 TerrariaClone: CMakeFiles/TerrariaClone.dir/src/TextureManager.cpp.o
 TerrariaClone: CMakeFiles/TerrariaClone.dir/src/Timer.cpp.o

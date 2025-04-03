@@ -332,7 +332,7 @@ CMakeFiles/TerrariaClone.dir/src/Player.cpp.o: \
   /Library/Frameworks/SDL2.framework/Headers/SDL_locale.h \
   /Library/Frameworks/SDL2.framework/Headers/SDL_misc.h \
   /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Player.h \
-  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/GameObject.h \
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Entity.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/ios \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__fwd/ios.h \

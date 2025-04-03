@@ -912,7 +912,7 @@ CMakeFiles/TerrariaClone.dir/src/Game.cpp.o: \
   /Library/Frameworks/SDL2.framework/Headers/SDL_version.h \
   /Library/Frameworks/SDL2.framework/Headers/SDL_locale.h \
   /Library/Frameworks/SDL2.framework/Headers/SDL_misc.h \
-  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/GameObject.h \
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Entity.h \
   /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Player.h \
   /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/TextureManager.h \
   /Library/Frameworks/SDL2_image.framework/Headers/SDL_image.h \

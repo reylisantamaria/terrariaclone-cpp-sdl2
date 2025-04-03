@@ -2,11 +2,11 @@
 
 #include <SDL.h>
 
-class GameObject {
+class Entity {
   public:
-    GameObject(float x, float y, int width, int height, const char* texturesheet, SDL_Renderer* ren);
-    virtual ~GameObject();
-
+    Entity(float x, float y, int width, int height,
+               const char* texturesheet, SDL_Renderer* ren);
+    virtual ~Entity();
     virtual void Update(float delta_time);
     virtual void Render();
 
@@ -14,6 +14,7 @@ class GameObject {
     float GetY() const { return y_; }
     int GetHeight() const { return height_; }
     int GetWidth() const { return width_; }
+    SDL_Renderer* GetRenderer() const { return renderer_; }
 
     void SetX(float newX) { x_ = newX; }
     void SetY(float newY) { y_ = newY; }

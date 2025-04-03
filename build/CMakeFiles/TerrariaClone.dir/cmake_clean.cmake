@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/TerrariaClone.dir/src/Entity.cpp.o"
+  "CMakeFiles/TerrariaClone.dir/src/Entity.cpp.o.d"
   "CMakeFiles/TerrariaClone.dir/src/Game.cpp.o"
   "CMakeFiles/TerrariaClone.dir/src/Game.cpp.o.d"
-  "CMakeFiles/TerrariaClone.dir/src/GameObject.cpp.o"
-  "CMakeFiles/TerrariaClone.dir/src/GameObject.cpp.o.d"
   "CMakeFiles/TerrariaClone.dir/src/Player.cpp.o"
   "CMakeFiles/TerrariaClone.dir/src/Player.cpp.o.d"
   "CMakeFiles/TerrariaClone.dir/src/TextureManager.cpp.o"
