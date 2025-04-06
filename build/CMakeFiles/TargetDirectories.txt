@@ -1,3 +1,0 @@
-/Users/reylisantamaria/Documents/GitHub/TerrariaClone/build/CMakeFiles/TerrariaClone.dir
-/Users/reylisantamaria/Documents/GitHub/TerrariaClone/build/CMakeFiles/edit_cache.dir
-/Users/reylisantamaria/Documents/GitHub/TerrariaClone/build/CMakeFiles/rebuild_cache.dir
