@@ -1,13 +1,13 @@
 #pragma once
 
-namespace Constants {
-  constexpr float kGravity = 60.0f;
-  constexpr float kFloorY = 640.0f - 32.0f;
-
-  // Player (defaults)
-  constexpr float kPlayerJumpForce = 500.0f;
-  constexpr float kPlayerMoveSpeed = 200.0f;
-  constexpr float kPlayerMaxJumpHeight = 80.0f;
+namespace kPhysics {
+  constexpr float GRAVITY = 60.0f;
+  constexpr float FLOOR_Y = 640.0f - 32.0f;
+}
+namespace kPlayer {
+  constexpr float BASE_RUN_SPEED = 144.0f;
+  constexpr float BASE_JUMP_SPEED = 60.0f;
+  constexpr float MAX_JUMP_HEIGHT = 50.0f;
 }
 
 namespace Tiles {
@@ -17,3 +17,6 @@ namespace Tiles {
   const int MAP_HEIGHT = 20;
   constexpr int TILE_SIZE = 32;
 };
+
+constexpr int SCREENWIDTH = 800;
+constexpr int SCREENHEIGHT = 640;

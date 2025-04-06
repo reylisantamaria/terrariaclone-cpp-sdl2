@@ -17,8 +17,4 @@ class Player : public Entity {
     bool is_jumping_;
     float velocityX_, velocityY_;
     float initial_y_;
-
-
-    // constants
-    static constexpr float kMaxSpeed = 144.0f;
 };
