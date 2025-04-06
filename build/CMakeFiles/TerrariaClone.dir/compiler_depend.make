@@ -913,7 +913,9 @@ CMakeFiles/TerrariaClone.dir/src/Entity.cpp.o: /Users/reylisantamaria/Documents/
   /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Entity.h \
   /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Game.h \
   /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Player.h \
-  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/TextureManager.h
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/TextureManager.h \
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Timer.h \
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Transform.h
 
 CMakeFiles/TerrariaClone.dir/src/Game.cpp.o: /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Game.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/Availability.h \
@@ -1828,11 +1830,13 @@ CMakeFiles/TerrariaClone.dir/src/Game.cpp.o: /Users/reylisantamaria/Documents/Gi
   /Library/Frameworks/SDL2.framework/Headers/begin_code.h \
   /Library/Frameworks/SDL2.framework/Headers/close_code.h \
   /Library/Frameworks/SDL2_image.framework/Headers/SDL_image.h \
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Constants.h \
   /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Entity.h \
   /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Game.h \
   /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Player.h \
   /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/TextureManager.h \
-  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Timer.h
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Timer.h \
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Transform.h
 
 CMakeFiles/TerrariaClone.dir/src/Player.cpp.o: /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Player.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/Availability.h \
@@ -2720,8 +2724,10 @@ CMakeFiles/TerrariaClone.dir/src/Player.cpp.o: /Users/reylisantamaria/Documents/
   /Library/Frameworks/SDL2.framework/Headers/SDL_video.h \
   /Library/Frameworks/SDL2.framework/Headers/begin_code.h \
   /Library/Frameworks/SDL2.framework/Headers/close_code.h \
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Constants.h \
   /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Entity.h \
-  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Player.h
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Player.h \
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Transform.h
 
 CMakeFiles/TerrariaClone.dir/src/TextureManager.cpp.o: /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/TextureManager.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/Availability.h \
@@ -3639,7 +3645,9 @@ CMakeFiles/TerrariaClone.dir/src/TextureManager.cpp.o: /Users/reylisantamaria/Do
   /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Entity.h \
   /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Game.h \
   /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Player.h \
-  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/TextureManager.h
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/TextureManager.h \
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Timer.h \
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Transform.h
 
 CMakeFiles/TerrariaClone.dir/src/Timer.cpp.o: /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Timer.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/Availability.h \
@@ -4885,7 +4893,9 @@ CMakeFiles/TerrariaClone.dir/src/main.cpp.o: /Users/reylisantamaria/Documents/Gi
   /Library/Frameworks/SDL2.framework/Headers/close_code.h \
   /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Entity.h \
   /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Game.h \
-  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Player.h
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Player.h \
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Timer.h \
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Transform.h
 
 
 /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/main.cpp:
@@ -4894,8 +4904,6 @@ CMakeFiles/TerrariaClone.dir/src/main.cpp.o: /Users/reylisantamaria/Documents/Gi
 
 /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/TextureManager.cpp:
 
-/Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Timer.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/ostream:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/iostream:
@@ -4903,6 +4911,8 @@ CMakeFiles/TerrariaClone.dir/src/main.cpp.o: /Users/reylisantamaria/Documents/Gi
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/bitset:
 
 /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Game.cpp:
+
+/Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Timer.h:
 
 /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/TextureManager.h:
 
@@ -5379,6 +5389,8 @@ CMakeFiles/TerrariaClone.dir/src/main.cpp.o: /Users/reylisantamaria/Documents/Gi
 /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/float.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__type_traits/is_class.h:
+
+/Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Constants.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__type_traits/is_bounded_array.h:
 
@@ -6025,6 +6037,8 @@ CMakeFiles/TerrariaClone.dir/src/main.cpp.o: /Users/reylisantamaria/Documents/Gi
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__atomic/atomic_lock_free.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/ranges_nth_element.h:
+
+/Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Transform.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/pthread/sched.h:
 

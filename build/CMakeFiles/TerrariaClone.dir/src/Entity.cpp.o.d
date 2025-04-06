@@ -911,4 +911,6 @@ CMakeFiles/TerrariaClone.dir/src/Entity.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/cstdarg \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__memory/temp_value.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__split_buffer \
-  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Player.h
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Player.h \
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Transform.h \
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Timer.h

@@ -1,5 +1,6 @@
 CMakeFiles/TerrariaClone.dir/src/Player.cpp.o: \
   /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Player.cpp \
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Player.h \
   /Library/Frameworks/SDL2.framework/Headers/SDL.h \
   /Library/Frameworks/SDL2.framework/Headers/SDL_main.h \
   /Library/Frameworks/SDL2.framework/Headers/SDL_stdinc.h \
@@ -331,8 +332,9 @@ CMakeFiles/TerrariaClone.dir/src/Player.cpp.o: \
   /Library/Frameworks/SDL2.framework/Headers/SDL_version.h \
   /Library/Frameworks/SDL2.framework/Headers/SDL_locale.h \
   /Library/Frameworks/SDL2.framework/Headers/SDL_misc.h \
-  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Player.h \
   /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Entity.h \
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Transform.h \
+  /Users/reylisantamaria/Documents/GitHub/TerrariaClone/src/Constants.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/ios \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__fwd/ios.h \

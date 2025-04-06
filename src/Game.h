@@ -1,8 +1,10 @@
 #pragma once
 #include <SDL.h>
 #include <vector>
+
 #include "Entity.h"
 #include "Player.h"
+#include "Timer.h"
 
 class Game {
   public:
@@ -18,8 +20,9 @@ class Game {
     void Render();
     
     bool running_;
-    std::vector<Entity*> game_objects_;
+    std::vector<Entity*> entities_;
     Player *player_;
     SDL_Window *window;
     SDL_Renderer *renderer;
+    
 };

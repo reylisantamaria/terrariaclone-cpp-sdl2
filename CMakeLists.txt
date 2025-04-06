@@ -15,7 +15,6 @@ find_library(SDL2_IMAGE_FRAMEWORK SDL2_image PATHS /Library/Frameworks)
 include_directories(/Library/Frameworks/SDL2.framework/Headers)
 include_directories(/Library/Frameworks/SDL2_image.framework/Headers)
 
-# Add source files
 file(GLOB SOURCES "src/*.cpp")
 
 # Add executable

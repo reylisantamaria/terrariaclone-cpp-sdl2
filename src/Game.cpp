@@ -1,12 +1,5 @@
-#include <iostream>
-#include <vector>
 #include "Game.h"
-#include "TextureManager.h"
-#include "Timer.h"
-
-// Main functions for the game
-
-
+#include <iostream>
 
 Game::Game(const char* p_title, int p_w, int p_h, bool fullscreen)
   : running_(false), window(nullptr), renderer(nullptr) {
@@ -21,28 +14,29 @@ Game::Game(const char* p_title, int p_w, int p_h, bool fullscreen)
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
     if (renderer) {
       SDL_SetRenderDrawColor(renderer, 96, 128, 255, 255);
-      std::cout << "Renderer created!" << std::endl;
+      std::cout << "Renderer created!" << "\n";
     }
     running_ = true; // Mark the game as running
 
-    player_ = new Player(100, 500, 50, 50, "../resources/images/entities/player.png", renderer);
+    Transform player_transform(100, 500, 50 ,50);
+    player_ = new Player(player_transform, "../resources/images/entities/player.png", renderer);
 
-    game_objects_.push_back(player_);
+    entities_.push_back(player_);
   } else {
-    std::cerr << "Error: " << SDL_GetError() << std::endl;
+    std::cerr << "Error: " << SDL_GetError() << "\n";
   }
 }
 
 Game::~Game() {
   // Clean up resources
-  for (auto obj : game_objects_) {
+  for (auto obj : entities_) {
     delete obj;
   }
   SDL_DestroyRenderer(renderer);
   SDL_DestroyWindow(window);
   SDL_Quit();
   running_ = false;
-  std::cout << "Game Cleaned" << std::endl;
+  std::cout << "Game Cleaned" << "\n";
 }
 
 void Game::Run() {
@@ -74,7 +68,7 @@ void Game::HandleEvents() {
 
 // main update 
 void Game::Update(float delta_time) {
-  for (auto obj : game_objects_) {
+  for (auto obj : entities_) {
     obj->Update(delta_time);
   }
   player_->HandleInput();
@@ -86,11 +80,9 @@ void Game::Render() {
   // clears screen
   SDL_RenderClear(renderer);
   // Render all game objects
-  for (auto obj : game_objects_) {
+  for (auto obj : entities_) {
     obj->Render();
   }
   // Update the screen
   SDL_RenderPresent(renderer);
 }
-
-

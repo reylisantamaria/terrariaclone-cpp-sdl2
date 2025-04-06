@@ -2,8 +2,9 @@
 #include "TextureManager.h"
 
 // how we create our object
-Entity::Entity(float x, float y, int width, int height, const char* texturesheet, SDL_Renderer* ren)
-  : renderer_(ren), x_(x), y_(y), width_(width), height_(height) {
+Entity::Entity(float x, float y, int w, int h, const char* texturesheet,
+               SDL_Renderer* ren)
+  : renderer_(ren), x_(x), y_(y), width_(w), height_(h) {
   objTexture_ = TextureManager::LoadTexture(texturesheet, ren);
 }
 

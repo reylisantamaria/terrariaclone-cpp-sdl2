@@ -1,5 +1,4 @@
 #include "Timer.h"
-#include "SDL.h"
 
 Timer::Timer(): last_time_(SDL_GetTicks()), delta_time_(0.0f) {}
 
