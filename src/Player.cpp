@@ -14,7 +14,7 @@ Player::Player(const Transform& transform, const char* texturePath, SDL_Renderer
     is_jumping_(false) {}
 
 
-// ------------------------------ MEMBER FUCNTIONS -------------------------------------
+// ======================[ UPDATE ]================
 void Player::Update(float delta_time) {
   HandleInput();
 
@@ -24,26 +24,45 @@ void Player::Update(float delta_time) {
       is_jumping_ = false;
     }
   }
-  x_ += velocityX_ * delta_time; // Move horizonatally
-  y_ += velocityY_ * delta_time; // move vertically
+  x_ += velocityX_ * delta_time;
+  y_ += velocityY_ * delta_time;
 
-  //------ Temp -------
+  // :::::::::::: Temp Ground Collision :::::::::::::
 
   if (y_ + height_ >= kPhysics::FLOOR_Y) {  // catches the player before it falls forever
     velocityY_ = 0;
     y_ = kPhysics::FLOOR_Y - height_;
     is_grounded_ = true;
   }
-
-  cout << "Y: " << y_ << " | VelY: " << velocityY_ << " | Grounded: " << is_grounded_ << endl;
+  // :::::::::: Debug ::::::::::
+  // cout << "Y: " << y_
+  //      << " | Grounded: " << is_grounded_
+  //      << endl;
+  
+  // const char* states[] = {"IDLE", "RUNNING", "JUMPING"};
+  // std::cout << "State: " << states[static_cast<int>(state_)] << "\n";
 }
 
+// ======================[ RENDER ]================
 void Player::Render() {
   Entity::Render();
+
+  // --- DRAW OUTLINE ---
+  SDL_SetRenderDrawColor(renderer_, 255, 0, 0, 1);
+  SDL_Rect outlineRect = {
+      static_cast<int>(x_),
+      static_cast<int>(y_),
+      width_,
+      height_
+  };
+  SDL_RenderDrawRect(renderer_, &outlineRect); // Draw the outline
+  SDL_SetRenderDrawColor(renderer_, 137, 196, 244, 1);
 }
 
+// ======================[ INPUT ]================
 void Player::HandleInput() {
   const Uint8* keys = SDL_GetKeyboardState(nullptr);
+  // :::::::::::::: Horizontal Movement ::::::::::::
 
   if (keys[SDL_SCANCODE_A]) {
     velocityX_ = -kPlayer::BASE_RUN_SPEED;
@@ -52,7 +71,7 @@ void Player::HandleInput() {
   } else {
     velocityX_ = 0;
   }
-  // -------- JUMP -------------
+  // :::::::::::::::: JUMP :::::::::::::::::::
   if (keys[SDL_SCANCODE_SPACE] && is_grounded_) {
     velocityY_ = -kPlayer::BASE_JUMP_SPEED * 0.8f;
     is_grounded_ = false;
@@ -62,4 +81,13 @@ void Player::HandleInput() {
   if (keys[SDL_SCANCODE_SPACE] && is_jumping_) {
     velocityY_ = -kPlayer::BASE_JUMP_SPEED;
   }
+  // :::::::::::: Player State ::::::::::::
+  if (!is_grounded_) {
+    state_ = PlayerState::JUMPING;
+  } else if (velocityX_ != 0) {
+    state_ = PlayerState::RUNNING;
+  } else {
+    state_ = PlayerState::IDLE;
+  }
+  
 }

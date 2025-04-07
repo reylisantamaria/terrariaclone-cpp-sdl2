@@ -13,7 +13,7 @@ Game::Game(const char* p_title, int p_w, int p_h, bool fullscreen)
     window = SDL_CreateWindow(p_title, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, p_w, p_h, flags);
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
     if (renderer) {
-      SDL_SetRenderDrawColor(renderer, 96, 128, 255, 255);
+      SDL_SetRenderDrawColor(renderer, 137, 196, 244, 1);
       std::cout << "Renderer created!" << "\n";
     }
     running_ = true; // Mark the game as running

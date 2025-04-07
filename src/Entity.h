@@ -10,8 +10,6 @@ class Entity {
     virtual void Update(float delta_time);
     virtual void Render();
 
-    SDL_Renderer* GetRenderer() const { return renderer_; }
-
     void SetPosition(float x, float y) { x_ = x; y_ = y;}
     
   protected: 

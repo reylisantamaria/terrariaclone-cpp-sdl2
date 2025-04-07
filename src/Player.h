@@ -4,6 +4,13 @@
 #include "Entity.h"
 #include "Transform.h"
 
+
+enum class PlayerState {
+  IDLE,
+  RUNNING,
+  JUMPING
+};
+
 class Player : public Entity {
   public:
     Player(const Transform& transform, const char* texturesheet, SDL_Renderer* renderer);
@@ -17,4 +24,6 @@ class Player : public Entity {
     bool is_jumping_;
     float velocityX_, velocityY_;
     float initial_y_;
+
+    PlayerState state_;
 };
