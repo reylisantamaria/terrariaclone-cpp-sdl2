@@ -45,6 +45,7 @@ A simple 2D sandbox game inspired by Terraria, built with C++ and SDL2 for macOS
      - From `SDL2/lib/x64/`:
        - `SDL2.lib`
        - `SDL2.dll`
+       - `SDL2main.lib`
      - From `SDL2_image/lib/x64/`:
        - `SDL2_image.lib`
        - `SDL2_image.dll`
