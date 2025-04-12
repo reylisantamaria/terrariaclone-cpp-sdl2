@@ -42,7 +42,6 @@ void Player::Update(float delta_time) {
   // :::::::::: Debug ::::::::::
   // const char* states[] = {"IDLE", "RUNNING", "JUMPING"};
   // cout << "State: " << states[static_cast<int>(state_)] << "\n";
-  cout << velocityY_ << "\n";
 }
 
 // ======================[ RENDER ]================
