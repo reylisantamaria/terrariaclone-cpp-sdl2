@@ -1,22 +1,30 @@
 #pragma once
 
+struct ScreenConfig {
+  int WIDTH  = 800;
+  int HEIGHT = 640;
+};
+
+inline ScreenConfig screen;
+
 namespace kPhysics {
-  constexpr float GRAVITY = 80.0f;
-  constexpr float FLOOR_Y = 640.0f - 32.0f;
+  constexpr float TILE_SIZE = 16.0f;              // pixels/tile
+  constexpr float GRAVITY   = TILE_SIZE * 51.0f;  // 816 px/sec^2
+  inline float GetFloorY() {
+    return static_cast<float>(screen.HEIGHT) - TILE_SIZE;
+  }
 }
 namespace kPlayer {
-  constexpr float BASE_RUN_SPEED = 144.0f;
-  constexpr float BASE_JUMP_SPEED = 70.0f;
-  constexpr float MAX_JUMP_HEIGHT = 50.0f;
+  constexpr float RUN_SPEED       = kPhysics::TILE_SIZE * 11.36f;
+  constexpr float JUMP_SPEED      = 320.0f;
+  constexpr float MAX_FALL_SPEED  = kPhysics::TILE_SIZE * 37.5f;
+  constexpr float MAX_JUMP_HEIGHT = kPhysics::TILE_SIZE * 5.0f;
 }
 
 namespace Tiles {
-  constexpr char GROUND = '1';
-  constexpr char EMPTY = '0';
-  const int MAP_WIDTH = 25;
-  const int MAP_HEIGHT = 20;
-  constexpr int TILE_SIZE = 32;
+  constexpr char GROUND   = '1';
+  constexpr char EMPTY    = '0';
+  constexpr int MAP_WIDTH     = 50;
+  constexpr int MAP_HEIGHT    = 40;
+  constexpr int TILE_SIZE = static_cast<int>(kPhysics::TILE_SIZE);
 };
-
-constexpr int SCREENWIDTH = 800;
-constexpr int SCREENHEIGHT = 640;

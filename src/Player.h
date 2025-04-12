@@ -8,7 +8,8 @@
 enum class PlayerState {
   IDLE,
   RUNNING,
-  JUMPING
+  JUMPING,
+  FALLING
 };
 
 class Player : public Entity {
@@ -21,9 +22,9 @@ class Player : public Entity {
 
   private:
     bool is_grounded_;
-    bool is_jumping_;
+    bool jumping_; // tracks if jump key is held
     float velocityX_, velocityY_;
-    float initial_y_;
+    float initial_y_; // tracks where the jump started
 
     PlayerState state_;
 };

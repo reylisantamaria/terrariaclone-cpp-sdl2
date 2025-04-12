@@ -18,10 +18,10 @@ Game::Game(const char* p_title, int p_w, int p_h, bool fullscreen)
     }
     running_ = true; // Mark the game as running
 
-    Transform player_transform(100, 500, 50 ,50);
-    player_ = new Player(player_transform, "../resources/images/entities/player.png", renderer);
+    Transform player_transform(100, 500, 32, 48);
+    player_ = std::make_unique<Player>(player_transform, "../resources/entities/player.png", renderer);
 
-    entities_.push_back(player_);
+    entities_.push_back(player_.get());
   } else {
     std::cerr << "Error: " << SDL_GetError() << "\n";
   }
@@ -29,9 +29,6 @@ Game::Game(const char* p_title, int p_w, int p_h, bool fullscreen)
 
 Game::~Game() {
   // Clean up resources
-  for (auto obj : entities_) {
-    delete obj;
-  }
   SDL_DestroyRenderer(renderer);
   SDL_DestroyWindow(window);
   SDL_Quit();
@@ -71,8 +68,6 @@ void Game::Update(float delta_time) {
   for (auto obj : entities_) {
     obj->Update(delta_time);
   }
-  player_->HandleInput();
-  player_->Update(delta_time);
 }
 
 

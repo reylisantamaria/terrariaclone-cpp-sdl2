@@ -3,6 +3,8 @@
 #include <iostream>
 
 using namespace std;
+using namespace kPhysics;
+using namespace kPlayer;
 
 // CONSTRUCTOR
 
@@ -11,7 +13,7 @@ Player::Player(const Transform& transform, const char* texturePath, SDL_Renderer
     velocityX_(0),
     velocityY_(0),
     is_grounded_(false),
-    is_jumping_(false) {}
+    jumping_(false) {}
 
 
 // ======================[ UPDATE ]================
@@ -19,28 +21,28 @@ void Player::Update(float delta_time) {
   HandleInput();
 
   if (!is_grounded_) {
-    velocityY_ +=  kPhysics::GRAVITY * delta_time;
-    if (initial_y_ - y_ >= kPlayer::MAX_JUMP_HEIGHT) {
-      is_jumping_ = false;
+    velocityY_ +=  GRAVITY * delta_time;  // apply gravity
+    if (initial_y_ - y_ >= MAX_JUMP_HEIGHT) {  // if the jump goes over the max jump height
+      jumping_ = false;   // prevents upward momentum
+      state_ = PlayerState::FALLING;
     }
+    velocityY_ = std::min(velocityY_, MAX_FALL_SPEED);
   }
+  // changes position based on movement
   x_ += velocityX_ * delta_time;
   y_ += velocityY_ * delta_time;
 
   // :::::::::::: Temp Ground Collision :::::::::::::
 
-  if (y_ + height_ >= kPhysics::FLOOR_Y) {  // catches the player before it falls forever
+  if (y_ + height_ >= GetFloorY()) {  // catches the player before it falls forever
     velocityY_ = 0;
-    y_ = kPhysics::FLOOR_Y - height_;
+    y_ = GetFloorY() - height_;
     is_grounded_ = true;
   }
   // :::::::::: Debug ::::::::::
-  // cout << "Y: " << y_
-  //      << " | Grounded: " << is_grounded_
-  //      << endl;
-  
   // const char* states[] = {"IDLE", "RUNNING", "JUMPING"};
-  // std::cout << "State: " << states[static_cast<int>(state_)] << "\n";
+  // cout << "State: " << states[static_cast<int>(state_)] << "\n";
+  cout << velocityY_ << "\n";
 }
 
 // ======================[ RENDER ]================
@@ -65,21 +67,21 @@ void Player::HandleInput() {
   // :::::::::::::: Horizontal Movement ::::::::::::
 
   if (keys[SDL_SCANCODE_A]) {
-    velocityX_ = -kPlayer::BASE_RUN_SPEED;
+    velocityX_ = -RUN_SPEED;
   } else if (keys[SDL_SCANCODE_D]) {
-    velocityX_ = kPlayer::BASE_RUN_SPEED;
+    velocityX_ = RUN_SPEED;
   } else {
     velocityX_ = 0;
   }
   // :::::::::::::::: JUMP :::::::::::::::::::
   if (keys[SDL_SCANCODE_SPACE] && is_grounded_) {
-    velocityY_ = -kPlayer::BASE_JUMP_SPEED * 0.8f;
+    velocityY_ = -JUMP_SPEED * 0.8f;
     is_grounded_ = false;
-    is_jumping_ = true;
+    jumping_ = true;
     initial_y_ = y_;
   }
-  if (keys[SDL_SCANCODE_SPACE] && is_jumping_) {
-    velocityY_ = -kPlayer::BASE_JUMP_SPEED;
+  if (keys[SDL_SCANCODE_SPACE] && jumping_) {
+    velocityY_ = -JUMP_SPEED;
   }
   // :::::::::::: Player State ::::::::::::
   if (!is_grounded_) {
