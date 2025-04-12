@@ -22,7 +22,8 @@ A simple 2D sandbox game inspired by Terraria, built with C++ and SDL2 for macOS
 
 ### Windows
 
-1. **Install SDL2 and SDL2_image**
+1. **Use Visual Studio Community 2022**
+2. **Install SDL2 and SDL2_image**
 
    - Download the following **development libraries for Visual C++**:
      - [SDL2-devel-2.30.11-VC.zip](https://github.com/libsdl-org/SDL/releases/tag/release-2.30.11)
@@ -50,7 +51,7 @@ A simple 2D sandbox game inspired by Terraria, built with C++ and SDL2 for macOS
        - `SDL2_image.lib`
        - `SDL2_image.dll`
 
-2. **Build**
+3. **Build**
    ```bash
    mkdir build
    cd build
@@ -58,7 +59,7 @@ A simple 2D sandbox game inspired by Terraria, built with C++ and SDL2 for macOS
    cmake --build . --config Release
    ```
 
-3. **Run**
+4. **Run**
    ```bash
    .\Release\TerrariaClone.exe
    ```
